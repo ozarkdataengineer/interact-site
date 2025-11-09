@@ -1,13 +1,21 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useFlowStore } from '@/store/flowStore';
+import { WelcomeScreen } from '@/components/WelcomeScreen';
+import { ServiceSelection } from '@/components/ServiceSelection';
+import { QuestionFlow } from '@/components/QuestionFlow';
+import { ContactForm } from '@/components/ContactForm';
+import { SuccessScreen } from '@/components/SuccessScreen';
 
 const Index = () => {
+  const currentStep = useFlowStore((state) => state.currentStep);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      {currentStep === 'welcome' && <WelcomeScreen />}
+      {currentStep === 'service-selection' && <ServiceSelection />}
+      {currentStep === 'questions' && <QuestionFlow />}
+      {currentStep === 'contact' && <ContactForm />}
+      {currentStep === 'success' && <SuccessScreen />}
+    </>
   );
 };
 

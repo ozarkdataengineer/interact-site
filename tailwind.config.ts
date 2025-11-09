@@ -22,10 +22,16 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          purple: "hsl(var(--primary-purple))",
+          blue: "hsl(var(--primary-blue))",
+          pink: "hsl(var(--primary-pink))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          indigo: "hsl(var(--secondary-indigo))",
+          cyan: "hsl(var(--secondary-cyan))",
+          emerald: "hsl(var(--secondary-emerald))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -57,11 +63,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        error: "hsl(var(--error))",
+        info: "hsl(var(--info))",
+        neutral: {
+          900: "hsl(var(--neutral-900))",
+          800: "hsl(var(--neutral-800))",
+          700: "hsl(var(--neutral-700))",
+          100: "hsl(var(--neutral-100))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Courier New', 'monospace'],
       },
       keyframes: {
         "accordion-down": {
